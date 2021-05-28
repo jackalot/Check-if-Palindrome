@@ -30,20 +30,20 @@
 		let text = document.getElementById("PalinBox").value;
 	 	ReverseText(text);
 	})
-	function ReverseText (string)
+	function ReverseText (str)
 	{
 		//woops, forgot reverse() is exclusive to arrays. Easier to do this than a for loop and .push()
-		let SplitArray = string.split("");
+		let SplitArray = str.split("");
 		let ReversedArray = SplitArray.reverse(); 
 		let ReversedString = ReversedArray.join(""); 
 		console.log(ReversedString);
-		if(ReversedString === string)
+		if(ReversedString === str)
 		{
-			
+			document.getElementById("Replace").innerHTML = "Yes, " + ReversedString + " is a palindrome.";
 		}
 		else
 		{
-
+			document.getElementById("Replace").innerHTML = "No, " + str + " is not a palindrome. Heres the reverse form " + ReversedString + ".";
 		}
 	}
 </script>
