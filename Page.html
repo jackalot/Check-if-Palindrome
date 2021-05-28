@@ -10,7 +10,7 @@
 <p id = "Replace"> Insert a word to check if its a Palindrome ( if its the same word pronounced backwards, like racecar.</p>
 <script type="text/javascript">
 	/*
-	Practicing Interview steps, thought process of how I did this below:
+	Practicing Interview steps, thought process of how I did this before I write code below:
 	query the button
 	add event to button
 	give the button a function
@@ -25,6 +25,27 @@
 			get the p tag with the id "replace" innerHTML =  "its not a palindrone, the reverse form is " + reverseword
 		}
 	*/
+	SendWordBtn = document.querySelector(".SendWord");
+	SendWordBtn.addEventListener("click", () => {
+		let text = document.getElementById("PalinBox").value;
+	 	ReverseText(text);
+	})
+	function ReverseText (string)
+	{
+		//woops, forgot reverse() is exclusive to arrays. Easier to do this than a for loop and .push()
+		let SplitArray = string.split("");
+		let ReversedArray = SplitArray.reverse(); 
+		let ReversedString = ReversedArray.join(""); 
+		console.log(ReversedString);
+		if(ReversedString === string)
+		{
+			
+		}
+		else
+		{
+
+		}
+	}
 </script>
 </body>
 </html>
